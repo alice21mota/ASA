@@ -33,6 +33,7 @@ Graph readGraph(){
     return graph;
 }
 
+// Comparator
 bool cmp(const Edge& a, const Edge& b) {
   return a.weight > b.weight;
 }
