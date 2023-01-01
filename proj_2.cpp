@@ -22,6 +22,31 @@ struct WeightedGraph{
 };
 
 
+// A structure to represent a weighted edge in the graph
+struct Edge{
+    int src, dest, weight;
+};
+
+// A structure to represent a connected, undirected and weighted graph
+struct Graph {
+  int V, E;
+  vector<Edge> edges;
+
+  // Constructor
+  Graph(int V, int E) : V(V), E(E) { }
+};
+
+// A structure to represent a subset for union-find
+struct Subset {
+  int parent, rank;
+};
+
+// Compare two edges according to their weights.
+bool compare(const Edge& a, const Edge& b) {
+  return a.weight < b.weight;
+}
+
+
 WeightedGraph readGraph() {
     WeightedGraph graph;
     
@@ -49,6 +74,9 @@ WeightedGraph readGraph() {
     }
     return graph;
 }
+
+
+
 
 
 // Function to print a weighted graph

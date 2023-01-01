@@ -2,6 +2,8 @@
     "files.associations": {
         "vector": "cpp",
         "ostream": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "__locale": "cpp",
+        "iostream": "cpp"
     }
 }
