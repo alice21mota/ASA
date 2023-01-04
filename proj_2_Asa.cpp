@@ -86,8 +86,8 @@ int Kruskal(Graph& graph, vector<int>& parent, vector<int>& rank){
 
 int main(){
     Graph graph = readGraph();
-    vector<int> parent(graph.V, -1);
-    vector<int> rank(graph.V, 0);
+    vector<int> parent(graph.V + 1, -1);
+    vector<int> rank(graph.V + 1, 0);
     int sum = Kruskal(graph, parent, rank);
     printf("%d\n", sum);
 }
